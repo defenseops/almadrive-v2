@@ -5,11 +5,13 @@
 .env.*.local
 backend/.env
 
-# Claude AI files
+# Claude AI / meta files
 .claude/
 design-system/
 *.jsonl
 SERVICE_PAGES_PLAN.md
+CLAUDE.md
+AGENTS.md
 
 # Python
 __pycache__/
