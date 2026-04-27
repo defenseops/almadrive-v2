@@ -1,0 +1,643 @@
+{
+  "meta": {
+    "title": "AlmaDrive — Premium Transfer in Almaty",
+    "description": "Premium chauffeur service and car hire with driver in Almaty. Airport transfers, business trips, VIP service. Call 24/7.",
+    "keywords": "almaty transfer, car hire with driver almaty, business class taxi almaty, airport transfer almaty"
+  },
+  "nav": {
+    "services": "Services",
+    "booking": "Book Now",
+    "whyUs": "About",
+    "about": "About",
+    "reviews": "Reviews",
+    "contacts": "Contacts",
+    "call": "Call Us"
+  },
+  "hero": {
+    "badge": "Premium Service",
+    "title": "Premium Chauffeur Service in Almaty",
+    "subtitle": "Professional drivers. Business and premium class vehicles. Punctuality and comfort in every ride.",
+    "cta": "Book a Ride",
+    "ctaCall": "Call Now",
+    "stats": {
+      "years": "years in business",
+      "clients": "happy clients",
+      "rating": "average rating",
+      "support": "24/7 support"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Full range of premium transportation services in Almaty and across Kazakhstan",
+    "from": "from",
+    "currency": "KZT",
+    "book": "Choose Service",
+    "items": {
+      "airport": {
+        "icon": "plane",
+        "title": "Airport Transfer",
+        "desc": "Meet & greet with sign, luggage assistance. Any flight, any time."
+      },
+      "hourly": {
+        "icon": "clock",
+        "title": "Hourly Hire",
+        "desc": "Driver at your disposal for business meetings and city trips."
+      },
+      "intercity": {
+        "icon": "map",
+        "title": "Intercity Rides",
+        "desc": "Comfortable trips between Kazakh cities with a professional driver."
+      },
+      "events": {
+        "icon": "calendar",
+        "title": "Event Transportation",
+        "desc": "Transfer organisation for conferences, weddings and corporate events."
+      },
+      "delegation": {
+        "icon": "briefcase",
+        "title": "Delegation Service",
+        "desc": "VIP escort for business and official delegations at the highest level."
+      },
+      "tour": {
+        "icon": "camera",
+        "title": "Tourist Rides",
+        "desc": "Individual routes and tours across Kazakhstan with a personal driver."
+      }
+    }
+  },
+  "booking": {
+    "title": "Book a Ride",
+    "subtitle": "Fill in the form — we will contact you within 15 minutes to confirm",
+    "form": {
+      "service": "Select service",
+      "vehicleClass": "Vehicle class",
+      "date": "Date and time",
+      "contact": "Your phone or WhatsApp",
+      "comment": "Comment (from, to, preferences)",
+      "calculate": "Calculate price",
+      "submit": "Submit request",
+      "submitting": "Sending..."
+    },
+    "price": {
+      "estimated": "Estimated price",
+      "disclaimer": "Final price confirmed upon booking",
+      "currency": "KZT"
+    },
+    "messages": {
+      "success": "Request received! We will contact you within 15 minutes.",
+      "error": "Could not send request. Please try again or call us.",
+      "validation": "Please fill in all required fields.",
+      "calcError": "Could not calculate price."
+    },
+    "info": {
+      "title": "Why choose us",
+      "items": [
+        "Professional drivers with 5+ years experience",
+        "Business and premium class vehicles",
+        "Fixed prices, no hidden charges",
+        "Available 24/7 including holidays",
+        "Airport meet & greet with sign",
+        "Cash or bank transfer payment"
+      ]
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose AlmaDrive",
+    "subtitle": "We don't just offer a ride — we create an experience",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Safety",
+        "desc": "All drivers pass strict screening. Vehicles undergo regular technical inspections."
+      },
+      {
+        "icon": "clock",
+        "title": "Punctuality",
+        "desc": "We value your time. Driver arrives 10 minutes before the scheduled time."
+      },
+      {
+        "icon": "star",
+        "title": "Comfort",
+        "desc": "Premium vehicles with leather interior, climate control and device charging."
+      },
+      {
+        "icon": "phone",
+        "title": "24/7 Support",
+        "desc": "Our dispatcher is available around the clock. We are always ready to help."
+      },
+      {
+        "icon": "tag",
+        "title": "Transparent Pricing",
+        "desc": "You know the cost in advance. No hidden fees or surprises."
+      },
+      {
+        "icon": "award",
+        "title": "Since 2018",
+        "desc": "Over 6 years in the Almaty transfer market. Thousands of satisfied clients."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Client Reviews",
+    "subtitle": "Trusted by company executives, diplomats and tourists from 40+ countries",
+    "addReview": "Leave a Review",
+    "form": {
+      "title": "Your Review",
+      "name": "Your name (optional)",
+      "rating": "Rating",
+      "text": "Tell us about your trip",
+      "submit": "Publish",
+      "success": "Thank you! Your review will be published after moderation.",
+      "error": "Could not submit review."
+    },
+    "pending": "Pending moderation"
+  },
+  "contacts": {
+    "title": "Contact Us",
+    "subtitle": "Ready to answer any questions and arrange your trip",
+    "phone": "+7 (777) 000-00-00",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "email": "info@almadrive.kz",
+    "address": "Almaty, Kazakhstan",
+    "hours": "Available 24/7",
+    "callBtn": "Call Now",
+    "whatsappBtn": "Message on WhatsApp"
+  },
+  "footer": {
+    "rights": "© 2024 AlmaDrive. All rights reserved.",
+    "privacy": "Privacy Policy"
+  },
+  "seoPages": {
+    "airport": {
+      "meta": {
+        "title": "Airport Transfer Almaty — AlmaDrive | from 8,000 KZT",
+        "description": "Airport transfer in Almaty. Meet & greet with sign, luggage assistance. Business and premium class. Available 24/7. Fixed price from 8,000 KZT.",
+        "keywords": "airport transfer almaty, taxi airport almaty, meet and greet almaty, transfer from almaty airport"
+      },
+      "hero": {
+        "badge": "Almaty Airport",
+        "title": "Airport Transfer",
+        "titleAccent": "in Almaty",
+        "subtitle": "Meet & greet in the arrivals hall. Luggage assistance included. On-time delivery — any time of day or night.",
+        "priceFrom": "from 8,000 KZT"
+      },
+      "features": [
+        {
+          "title": "Meet & Greet",
+          "desc": "Driver waits for you in the arrivals hall with a name sign"
+        },
+        {
+          "title": "Flight Tracking",
+          "desc": "We track your flight and adjust pickup time automatically"
+        },
+        {
+          "title": "Luggage Assistance",
+          "desc": "Driver helps carry your luggage to the car"
+        },
+        {
+          "title": "Fixed Price",
+          "desc": "Price agreed in advance — no surprises"
+        },
+        {
+          "title": "24/7 Availability",
+          "desc": "We operate around the clock, including night and early flights"
+        },
+        {
+          "title": "Clean Vehicle",
+          "desc": "Vehicle is always clean and ready for your trip"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does an airport transfer in Almaty cost?",
+          "a": "Airport transfer starts from 8,000 KZT for a business class vehicle. The exact price depends on the destination address and vehicle class. Submit a request for a quote."
+        },
+        {
+          "q": "How will the driver find me?",
+          "a": "The driver will wait in the arrivals hall holding a sign with your name or company name. You will also receive the driver's phone number."
+        },
+        {
+          "q": "What if my flight is delayed?",
+          "a": "We track your flight in real time. If it is delayed, the driver adjusts the waiting time automatically at no extra charge."
+        },
+        {
+          "q": "Can I request a child seat?",
+          "a": "Yes, a child seat can be requested in advance when submitting your booking. The service is free of charge."
+        }
+      ],
+      "breadcrumb": "Airport Transfer",
+      "stats": [
+        {
+          "value": "8 000 ₸",
+          "label": "starting from"
+        },
+        {
+          "value": "60 min",
+          "label": "free waiting time"
+        },
+        {
+          "value": "24/7",
+          "label": "working hours"
+        },
+        {
+          "value": "100%",
+          "label": "flight tracking"
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Book your transfer",
+          "desc": "Enter your flight, date and destination. Confirmation within 5 minutes."
+        },
+        {
+          "step": "02",
+          "title": "Driver departs",
+          "desc": "30 minutes before landing your driver is already at the airport tracking your flight."
+        },
+        {
+          "step": "03",
+          "title": "Meet & ride",
+          "desc": "Your driver meets you in arrivals with a name sign and takes you to any address in Almaty."
+        }
+      ]
+    },
+    "chauffeur": {
+      "meta": {
+        "title": "Chauffeur Service Almaty — AlmaDrive | from 7,000 KZT/hr",
+        "description": "Hourly car hire with driver in Almaty. Business and premium class. For business meetings, events and city transfers. Professional chauffeurs.",
+        "keywords": "chauffeur service almaty, car hire with driver almaty, personal driver almaty, hourly car rental almaty"
+      },
+      "hero": {
+        "badge": "Personal Chauffeur",
+        "title": "Chauffeur Service",
+        "titleAccent": "in Almaty",
+        "subtitle": "A professional driver at your disposal. Business meetings, city trips, events — we take care of all your transportation needs.",
+        "priceFrom": "from 7,000 KZT/hr"
+      },
+      "features": [
+        {
+          "title": "Experienced Drivers",
+          "desc": "Drivers with 5+ years of experience who know the city"
+        },
+        {
+          "title": "Flexible Schedule",
+          "desc": "Book by the hour, for a day or for several days"
+        },
+        {
+          "title": "Business Etiquette",
+          "desc": "Drivers maintain professional conduct and confidentiality"
+        },
+        {
+          "title": "Any Route",
+          "desc": "City, out of town, multiple stops in one trip"
+        },
+        {
+          "title": "Comfortable Cabin",
+          "desc": "Wi-Fi, device charging, bottled water on board"
+        },
+        {
+          "title": "Pay As You Go",
+          "desc": "You only pay for the time actually used"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How is the hourly rate calculated?",
+          "a": "Minimum booking is 1 hour. The hourly rate depends on the vehicle class: from 7,000 KZT for business class. Special daily rates are available for full-day bookings."
+        },
+        {
+          "q": "Is fuel included in the price?",
+          "a": "Yes, fuel is included in the rental price. No hidden charges."
+        },
+        {
+          "q": "Can I book a driver for several days?",
+          "a": "Yes, we provide multi-day chauffeur service — for example, to accompany a business delegation or during a work trip."
+        },
+        {
+          "q": "What vehicles do your drivers use?",
+          "a": "We offer business class vehicles (Mercedes E-Class, BMW 5, Audi A6) and premium class (Mercedes S-Class, BMW 7, Lexus LS). All vehicles are recent models."
+        }
+      ],
+      "breadcrumb": "Chauffeur Service",
+      "stats": [
+        {
+          "value": "10 000 ₸",
+          "label": "per hour from"
+        },
+        {
+          "value": "2 hrs",
+          "label": "minimum booking"
+        },
+        {
+          "value": "3",
+          "label": "vehicle classes"
+        },
+        {
+          "value": "24/7",
+          "label": "availability"
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Choose your vehicle class",
+          "desc": "Business, Comfort or Premium — we match the car to your task and budget."
+        },
+        {
+          "step": "02",
+          "title": "Set hours & route",
+          "desc": "Minimum 2 hours. You can change the route anytime during the ride."
+        },
+        {
+          "step": "03",
+          "title": "Driver at your disposal",
+          "desc": "An experienced driver stays with you the whole time — meetings, shopping, airport — wherever you need."
+        }
+      ]
+    },
+    "vip": {
+      "meta": {
+        "title": "VIP Transfer Almaty — AlmaDrive | Premium Class",
+        "description": "VIP transfer in Almaty. Premium vehicles: Mercedes S-Class, BMW 7, Lexus LS. For delegations, executives and special occasions. Full confidentiality guaranteed.",
+        "keywords": "vip transfer almaty, premium taxi almaty, mercedes s class almaty, vip transport almaty, delegation transfer almaty"
+      },
+      "hero": {
+        "badge": "VIP & Premium",
+        "title": "VIP Transfer",
+        "titleAccent": "in Almaty",
+        "subtitle": "For those who demand flawless service. Top-tier vehicles, experienced chauffeurs, absolute confidentiality.",
+        "priceFrom": "from 12,000 KZT"
+      },
+      "features": [
+        {
+          "title": "Premium Vehicles",
+          "desc": "Mercedes S-Class, BMW 7 Series, Lexus LS — only the best"
+        },
+        {
+          "title": "Confidentiality",
+          "desc": "We never disclose information about our clients"
+        },
+        {
+          "title": "Personal Manager",
+          "desc": "Dedicated manager to coordinate every detail"
+        },
+        {
+          "title": "Protocol Knowledge",
+          "desc": "Drivers are versed in business etiquette and protocol"
+        },
+        {
+          "title": "Delegation Transfers",
+          "desc": "Full transport organisation for official delegations"
+        },
+        {
+          "title": "Motorcade",
+          "desc": "Multi-vehicle convoy arrangement available on request"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which vehicles are in the VIP class?",
+          "a": "The VIP fleet includes Mercedes-Benz S-Class, BMW 7 Series, Lexus LS and Genesis G90. All vehicles are no older than 3 years, with leather interior and panoramic roof."
+        },
+        {
+          "q": "Do you guarantee confidentiality?",
+          "a": "Absolutely. We sign an NDA upon client request. No information about trips or clients is shared with third parties."
+        },
+        {
+          "q": "Can you organise a VIP delegation arrival?",
+          "a": "Yes, this is one of our core services. We organise airport reception, accommodation transfers and full delegation logistics with protocol compliance."
+        },
+        {
+          "q": "How do I book a VIP transfer?",
+          "a": "Submit a request on the website or call us. We recommend booking at least 24 hours in advance to ensure vehicle availability."
+        }
+      ],
+      "breadcrumb": "VIP Transfer",
+      "stats": [
+        {
+          "value": "S/E/W",
+          "label": "Mercedes classes"
+        },
+        {
+          "value": "NDA",
+          "label": "confidentiality"
+        },
+        {
+          "value": "VIP",
+          "label": "business lounge"
+        },
+        {
+          "value": "24/7",
+          "label": "availability"
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Personal manager",
+          "desc": "Your request is handled by a personal manager — no bots or call centre operators."
+        },
+        {
+          "step": "02",
+          "title": "Vehicle selection",
+          "desc": "Mercedes-Benz S-Class, BMW 7, Lexus LS — we choose the car matching your status."
+        },
+        {
+          "step": "03",
+          "title": "Flawless execution",
+          "desc": "Driver in a business suit. VIP lounge meet. A quiet, comfortable ride to your destination."
+        }
+      ]
+    },
+    "intercity": {
+      "meta": {
+        "title": "Intercity Transfer from Almaty — Travel across Kazakhstan from 30 000 ₸",
+        "description": "Comfortable intercity transfers across Kazakhstan. Almaty to Nur-Sultan, Shymkent, Taldykorgan. Fixed price, experienced driver, premium vehicle.",
+        "keywords": "intercity transfer almaty, almaty to nur-sultan transfer, taxi between cities kazakhstan"
+      },
+      "hero": {
+        "badge": "Kazakhstan",
+        "title": "Intercity",
+        "titleAccent": "transfer",
+        "subtitle": "Comfortable rides between cities across Kazakhstan. Almaty to Nur-Sultan, Shymkent, Taldykorgan and other destinations. Fixed price, no hidden charges.",
+        "priceFrom": "from 30 000 ₸"
+      },
+      "stats": [
+        {
+          "value": "30 000 ₸",
+          "label": "starting from"
+        },
+        {
+          "value": "1 200 km",
+          "label": "max distance"
+        },
+        {
+          "value": "5★",
+          "label": "driver rating"
+        },
+        {
+          "value": "24/7",
+          "label": "booking"
+        }
+      ],
+      "features": [
+        {
+          "title": "Fixed price",
+          "desc": "Price is agreed before departure and never changes — no surprises on the road."
+        },
+        {
+          "title": "Premium vehicle",
+          "desc": "Business class and above: spacious interior, leather seats, climate control."
+        },
+        {
+          "title": "Experienced driver",
+          "desc": "Drivers with intercity experience, familiar with highways and weather conditions."
+        },
+        {
+          "title": "Stops along the way",
+          "desc": "We stop when needed — fuel stations, cafes, scenic points of the route."
+        },
+        {
+          "title": "Door-to-door delivery",
+          "desc": "We pick you up from your address and deliver you right to your destination."
+        },
+        {
+          "title": "Child seat available",
+          "desc": "Child seat available on request at no extra charge."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Enter your route",
+          "desc": "Tell us origin, destination, date and number of passengers."
+        },
+        {
+          "step": "02",
+          "title": "Get a price",
+          "desc": "Manager calculates cost and selects a vehicle within 10 minutes."
+        },
+        {
+          "step": "03",
+          "title": "Worry-free ride",
+          "desc": "Driver picks you up from your door and delivers you comfortably to your destination."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which cities do you serve?",
+          "a": "We operate transfers from Almaty to Nur-Sultan (Astana), Shymkent, Taldykorgan, Kapchagay, Turkestan and other Kazakhstan cities. Specify your route when booking."
+        },
+        {
+          "q": "How much is Almaty to Nur-Sultan transfer?",
+          "a": "The Almaty — Nur-Sultan route starts from 80 000 ₸ for a business-class vehicle. Exact price depends on vehicle class and date."
+        },
+        {
+          "q": "How do I pay?",
+          "a": "Payment is made in cash or by card after the trip. No prepayment required."
+        },
+        {
+          "q": "Can I book a round trip?",
+          "a": "Yes, we can organise a round trip with or without waiting time at the destination."
+        }
+      ],
+      "breadcrumb": "Intercity Transfer"
+    },
+    "events": {
+      "meta": {
+        "title": "Event Transfer in Almaty — Weddings, Corporate Events, Conferences",
+        "description": "We organise transfers for any event in Almaty. Weddings, corporate events, business conferences. Premium fleet, punctual drivers.",
+        "keywords": "event transfer almaty, wedding transfer almaty, corporate transfer almaty, conference transfer almaty"
+      },
+      "hero": {
+        "badge": "Events",
+        "title": "Transfer for",
+        "titleAccent": "events",
+        "subtitle": "We organise seamless logistics for weddings, corporate events and business conferences. Premium fleet, punctual drivers, real-time coordination.",
+        "priceFrom": "from 20 000 ₸"
+      },
+      "stats": [
+        {
+          "value": "20 000 ₸",
+          "label": "starting from"
+        },
+        {
+          "value": "10+",
+          "label": "vehicles in fleet"
+        },
+        {
+          "value": "500+",
+          "label": "events served"
+        },
+        {
+          "value": "24/7",
+          "label": "coordination"
+        }
+      ],
+      "features": [
+        {
+          "title": "Wedding transfer",
+          "desc": "Decorated vehicle, timely arrival, romantic atmosphere for your special day."
+        },
+        {
+          "title": "Corporate events",
+          "desc": "Transfer for delegations, guests and company staff. Multi-vehicle coordination."
+        },
+        {
+          "title": "Business conferences",
+          "desc": "Transfer for speakers and VIP guests. Airport pickup, hotel and venue delivery."
+        },
+        {
+          "title": "Fleet for any scale",
+          "desc": "From one vehicle to organising transfers for 100+ guests."
+        },
+        {
+          "title": "Single point of coordination",
+          "desc": "A personal manager coordinates all transfers — you focus on the event, we handle logistics."
+        },
+        {
+          "title": "Fixed price",
+          "desc": "Full cost is known in advance. No surprises on the day of the event."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Describe your event",
+          "desc": "Share event type, number of guests, dates and addresses — we'll build a logistics plan."
+        },
+        {
+          "step": "02",
+          "title": "Agree on a plan",
+          "desc": "Personal manager selects vehicles, drivers and builds a pickup schedule."
+        },
+        {
+          "step": "03",
+          "title": "Event day",
+          "desc": "Everything runs like clockwork — you enjoy the event, we deliver flawless logistics."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can you organise transfer for a large wedding?",
+          "a": "Yes, we organise transfers for events of any scale. Our fleet includes 10+ business-class and above vehicles. Tell us about your event and we'll create a custom proposal."
+        },
+        {
+          "q": "Do you decorate vehicles for weddings?",
+          "a": "Yes, on request we decorate vehicles with ribbons and flowers matching your colour scheme."
+        },
+        {
+          "q": "How far in advance should I book?",
+          "a": "We recommend booking 7–14 days before the event. For large corporate events — one month in advance."
+        },
+        {
+          "q": "Do you serve out-of-town venues?",
+          "a": "Yes, we serve suburban venues, restaurants and hotels in the Almaty region."
+        }
+      ],
+      "breadcrumb": "Event Transfer"
+    }
+  }
+}

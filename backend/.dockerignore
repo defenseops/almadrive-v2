@@ -1,0 +1,11 @@
+.env*
+__pycache__
+*.pyc
+*.pyo
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+alembic/versions/
+*.log
