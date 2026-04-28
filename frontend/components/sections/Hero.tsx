@@ -6,8 +6,8 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 const STATS = [
-  { value: "6+", key: "years" },
-  { value: "3 000+", key: "clients" },
+  { value: "3+", key: "years" },
+  { value: "500+", key: "clients" },
   { value: "4.9★", key: "rating" },
   { value: "24/7", key: "support" },
 ];
@@ -138,12 +138,19 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex flex-wrap gap-4"
           >
-            <button
-              onClick={scrollToBooking}
-              className="bg-red-600 hover:bg-red-700 text-white text-[11px] uppercase tracking-[0.25em] font-medium px-8 py-4 transition-all duration-300 cursor-pointer"
-            >
-              {t("cta")}
-            </button>
+            <div className="relative">
+              <motion.div
+                animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.15, 0.5] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-0 bg-red-600 blur-md rounded-sm pointer-events-none"
+              />
+              <button
+                onClick={scrollToBooking}
+                className="relative bg-red-600 hover:bg-red-500 text-white text-[12px] uppercase tracking-[0.3em] font-semibold px-10 py-5 transition-all duration-300 cursor-pointer shadow-lg shadow-red-600/30 hover:shadow-red-500/50"
+              >
+                {t("cta")}
+              </button>
+            </div>
             <a
               href={`tel:+77771234567`}
               className="border border-white/20 text-white hover:border-white/60 text-[11px] uppercase tracking-[0.25em] font-medium px-8 py-4 transition-all duration-300"

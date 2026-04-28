@@ -4,6 +4,7 @@ import { Jost, Bodoni_Moda } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -122,6 +123,21 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${jost.variable} ${bodoni.variable}`}>
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BVMFEZG2Y6"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BVMFEZG2Y6');
+          `}
+        </Script>
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
