@@ -14,7 +14,7 @@ git pull origin main
 
 # Build
 echo "Building containers..."
-docker compose build --no-cache frontend backend
+docker compose build frontend backend
 
 # Start everything
 docker compose up -d
