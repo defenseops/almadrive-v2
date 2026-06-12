@@ -212,20 +212,29 @@ async def _handle_message(msg: dict, db: Session) -> None:
         await _send(chat_id, "⛔️ Нет доступа.")
         return
 
-    # Waiting for price input
-    if chat_id in _pending and _pending[chat_id].get("action") == "await_price":
-        await _handle_price_input(chat_id, text, db)
-        return
+    # Waiting for input
+    if chat_id in _pending:
+        action = _pending[chat_id].get("action")
+        if action == "await_price":
+            await _handle_price_input(chat_id, text, db)
+            return
+        elif action in ("await_tariff_svc", "await_tariff_cls"):
+            await _handle_tariff_input(chat_id, text, db)
+            return
 
-    # Commands
+    # Commands and keyboard buttons
     if text in ("/start", "/menu"):
         await _send_menu(chat_id)
-    elif text == "/orders":
+    elif text in ("/orders", "📋 Заказы"):
         await _show_orders(chat_id, 0, "", db)
-    elif text == "/stats":
+    elif text in ("🆕 Новые заявки",):
+        await _show_orders(chat_id, 0, "new", db)
+    elif text in ("/stats", "📊 Статистика"):
         await _show_stats(chat_id, db)
-    elif text == "/reviews":
+    elif text in ("/reviews", "💬 Отзывы"):
         await _show_reviews(chat_id, db)
+    elif text in ("💰 Тарифы",):
+        await _show_tariffs(chat_id, db)
     elif text.startswith("/order_"):
         try:
             bid = int(text.split("_")[1])
@@ -278,6 +287,9 @@ async def _handle_callback(cq: dict, db: Session) -> None:
     elif data in ("reviews", "menu_reviews"):
         await _show_reviews(chat_id, db, edit_msg_id=msg_id)
 
+    elif data == "tariffs":
+        await _show_tariffs(chat_id, db, edit_msg_id=msg_id)
+
     elif data == "menu":
         await _send_menu(chat_id)
 
@@ -296,6 +308,12 @@ async def _handle_callback(cq: dict, db: Session) -> None:
                 {"text": "« Назад", "callback_data": f"order:{booking_id}"},
             ]]
         })
+
+    elif data.startswith("tariff:"):
+        parts = data.split(":")
+        kind = parts[1]  # 'svc' or 'cls'
+        entity_id = int(parts[2])
+        await _show_tariff_edit(chat_id, msg_id, kind, entity_id, db)
 
 
 async def _handle_price_input(chat_id: int, text: str, db: Session) -> None:
@@ -527,22 +545,122 @@ async def _handle_review_action(chat_id: int, msg_id: int | None, review_id: int
                     {"inline_keyboard": [[{"text": "« К отзывам", "callback_data": "reviews"}]]})
 
 
+async def _show_tariff_edit(chat_id: int, msg_id: int | None, kind: str, entity_id: int, db: Session) -> None:
+    try:
+        from api.models import Service, VehicleClass
+    except ImportError:
+        from models import Service, VehicleClass  # type: ignore
+
+    if kind == "svc":
+        obj = db.query(Service).filter(Service.id == entity_id).first()
+        if not obj:
+            await _send(chat_id, "Услуга не найдена.")
+            return
+        price = f"{obj.price_from:,} ₸".replace(",", " ") if obj.price_from else "не задана"
+        _pending[chat_id] = {"action": "await_tariff_svc", "entity_id": entity_id}
+        text = f"<b>{obj.name}</b>\nТекущая цена: {price}\n\nВведите новую цену (в тенге):"
+    else:
+        obj = db.query(VehicleClass).filter(VehicleClass.id == entity_id).first()
+        if not obj:
+            await _send(chat_id, "Класс авто не найден.")
+            return
+        _pending[chat_id] = {"action": "await_tariff_cls", "entity_id": entity_id}
+        text = f"<b>{obj.name}</b>\nТекущий множитель: ×{obj.price_multiplier / 100:.2f}\n\nВведите новый множитель × 100 (например, 150 = ×1.50):"
+
+    kb = {"inline_keyboard": [[{"text": "« Отмена", "callback_data": "tariffs"}]]}
+    if msg_id:
+        await _edit(chat_id, msg_id, text, kb)
+    else:
+        await _send(chat_id, text, kb)
+
+
+async def _handle_tariff_input(chat_id: int, text: str, db: Session) -> None:
+    clean = text.replace(" ", "").replace(",", "")
+    if not clean.isdigit():
+        await _send(chat_id, "Введите число:")
+        return
+
+    value = int(clean)
+    state = _pending.pop(chat_id)
+    action = state["action"]
+    entity_id = state["entity_id"]
+
+    try:
+        from api.models import Service, VehicleClass
+    except ImportError:
+        from models import Service, VehicleClass  # type: ignore
+
+    if action == "await_tariff_svc":
+        obj = db.query(Service).filter(Service.id == entity_id).first()
+        if not obj:
+            await _send(chat_id, "Услуга не найдена.")
+            return
+        obj.price_from = value
+        db.commit()
+        price_fmt = f"{value:,} ₸".replace(",", " ")
+        await _send(chat_id, f"✅ Цена <b>{obj.name}</b> обновлена: {price_fmt}",
+                    {"inline_keyboard": [[{"text": "« К тарифам", "callback_data": "tariffs"}]]})
+    else:
+        obj = db.query(VehicleClass).filter(VehicleClass.id == entity_id).first()
+        if not obj:
+            await _send(chat_id, "Класс авто не найден.")
+            return
+        obj.price_multiplier = value
+        db.commit()
+        await _send(chat_id, f"✅ Множитель <b>{obj.name}</b> обновлён: ×{value / 100:.2f}",
+                    {"inline_keyboard": [[{"text": "« К тарифам", "callback_data": "tariffs"}]]})
+
+
+def _reply_keyboard() -> dict:
+    return {
+        "keyboard": [
+            [{"text": "📋 Заказы"}, {"text": "🆕 Новые заявки"}],
+            [{"text": "💬 Отзывы"}, {"text": "💰 Тарифы"}],
+            [{"text": "📊 Статистика"}],
+        ],
+        "resize_keyboard": True,
+        "persistent": True,
+    }
+
+
 async def _send_menu(chat_id: int) -> None:
-    await _send(
-        chat_id,
-        "<b>AlmaDrive Admin Bot</b>\n\n"
-        "📋 /orders — все заказы\n"
-        "📊 /stats — статистика\n"
-        "💬 /reviews — отзывы\n"
-        "/order_N — открыть заявку #N",
-        {"inline_keyboard": [
-            [
-                {"text": "📋 Заказы", "callback_data": "orders:0:"},
-                {"text": "🆕 Новые", "callback_data": "orders:0:new"},
-            ],
-            [
-                {"text": "📊 Статистика", "callback_data": "stats"},
-                {"text": "💬 Отзывы", "callback_data": "reviews"},
-            ],
-        ]}
-    )
+    payload: dict = {
+        "chat_id": chat_id,
+        "text": "<b>AlmaDrive Admin Bot</b>\n\nВыберите раздел:",
+        "parse_mode": "HTML",
+        "reply_markup": _reply_keyboard(),
+    }
+    await _api("sendMessage", payload)
+
+
+async def _show_tariffs(chat_id: int, db: Session, edit_msg_id: int | None = None) -> None:
+    try:
+        from api.models import Service, VehicleClass
+    except ImportError:
+        from models import Service, VehicleClass  # type: ignore
+
+    services = db.query(Service).filter(Service.is_active == True).order_by(Service.id).all()
+    classes = db.query(VehicleClass).filter(VehicleClass.is_active == True).order_by(VehicleClass.id).all()
+
+    lines = ["<b>💰 Тарифы</b>\n"]
+    lines.append("<b>Услуги:</b>")
+    for s in services:
+        price = f"{s.price_from:,} ₸".replace(",", " ") if s.price_from else "не задана"
+        lines.append(f"  • {s.name} — от {price}")
+
+    lines.append("\n<b>Классы авто:</b>")
+    for c in classes:
+        lines.append(f"  • {c.name} — ×{c.price_multiplier / 100:.2f}")
+
+    text = "\n".join(lines)
+    rows = []
+    for s in services:
+        rows.append([{"text": f"✏️ {s.name}", "callback_data": f"tariff:svc:{s.id}"}])
+    for c in classes:
+        rows.append([{"text": f"✏️ {c.name} (класс авто)", "callback_data": f"tariff:cls:{c.id}"}])
+
+    kb = {"inline_keyboard": rows}
+    if edit_msg_id:
+        await _edit(chat_id, edit_msg_id, text, kb)
+    else:
+        await _send(chat_id, text, kb)
