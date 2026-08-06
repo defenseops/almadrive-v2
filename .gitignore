@@ -30,7 +30,7 @@ frontend/node_modules/
 frontend/.next/
 frontend/tsconfig.tsbuildinfo
 
-# SSL certificates (generated on server)
+# SSL certificates (managed by certbot volume on server)
 nginx/ssl/
 
 # macOS
